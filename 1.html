@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQuery</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            // dodaje tekst na końcu każdego akapitu
+            $("p").append("<a href='#'>Czytaj dalej</a>");
+            // dodaję tekst na końcu akapitu po wciśnieciu przycisku
+            $("button").click(function(){
+                $("#container").append("Kot ma Alę");
+            });
+        });
+    </script>
+</head>
+<body>
+    <button type="button">Wprowadź tekst</button>
+    <div id="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laudantium at quasi commodi modi quos nulla neque, consequuntur eos sint dolorem corporis assumenda? Magni voluptatibus corporis autem labore, error officiis.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laudantium at quasi commodi modi quos nulla neque, consequuntur eos sint dolorem corporis assumenda? Magni voluptatibus corporis autem labore, error officiis.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laudantium at quasi commodi modi quos nulla neque, consequuntur eos sint dolorem corporis assumenda? Magni voluptatibus corporis autem labore, error officiis.</p>
+    </div>
+</body>
+</html>

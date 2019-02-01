@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQuery</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            // przypisz klasę aaa elementom <li>
+            // $("li").addClass("aaa");
+
+            // przypisz klasę aaa rodzicowi elementów <li>
+            // $("li").parent().addClass("aaa");
+            
+            // przypisz klasę aaa wszystkim rodzicom elementów <li>
+            // $("li").parents().addClass("aaa");
+            
+            // przypisz klasę aaa wszystkim rodzicom elementów <li>, bez <body> i <html>
+            // $("li").parentsUntil("body").addClass("aaa");
+
+            // przypisz klasę aaa rodzeństwu elementów <ul>
+            // $("ul").siblings().addClass("aaa");
+
+            // przypisz klasę aaa następnemu rodzeństwu elementu <h1>
+            // $("h1").next().addClass("aaa");
+
+            // przypisz klasę aaa następnemu każdemu rodzeństwu elementu <h1>
+            // $("h1").nextAll().addClass("aaa");
+
+            // przypisz klasę aaa każdemu poprzedniemu rodzeństwu elementu <li>
+            // $("li").prevAll().addClass("aaa");
+
+            // przypisz klase aaa dziecion <ul>
+            // $("ul").children().addClass("aaa");
+
+            // przypisz klase aaa wszystkim elementom li wewnatrz kontenera <div>
+            // $("div").find("li").addClass("aaa");
+
+            // pierwszemu <li> nadaj klasę aaa
+            // $("li").first().addClass("aaa"); 
+
+            // ostatniemu <li> nadaj klasę aaa
+            // $("li").last().addClass("aaa");
+
+            // trzeciemu <li> nadaj klasę aaa
+            // $("li").eq(2).addClass("aaa");
+            
+            // parzystym <li> nadaj klasę aaa
+            // $("li").filter(":even").addClass("aaa");
+
+            // nieparzystym <li> nadaj klasę aaa
+            // $("li").filter(":odd").addClass("aaa");
+
+            // parzystym <li> nadaj klasę aaa (not = odwrotnosć)
+            // $("li").not(":odd").addClass("aaa");
+
+            // <li> 3-5 nadaj klasę aaa
+            $("li").slice(2,5).addClass("aaa");
+
+
+        });
+    </script>
+    <style>
+        .aaa {
+            background: yellow;
+            border: 1px solid green;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Kot ma Alę</h1>
+        <p><em>Zajęcia w dniu</em> 1 luty 2019</p>
+        <ul>
+            <li>Element 1</li>
+            <li>Element 2</li>
+            <li>Element 3</li>
+            <li>Element 4</li>
+            <li>Element 5</li>
+            <li>Element 6</li>
+        </ul>
+    </div>
+</body>
+</html>

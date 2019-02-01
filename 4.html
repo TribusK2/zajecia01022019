@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQuery</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            // dodaję za kontenerem div
+            $("#container").after("<p>&mdash; Koniec tekstu &mdash; </p>");
+            $("#container").before("<p>&mdash; Początek tekstu &mdash; </p>");
+            $(".przed").click(function(){
+                $("h1").before("&mdash;");
+            });
+            $(".po").click(function(){
+                $("h1").after("&mdash;");
+            });
+            
+        });
+    </script>
+    <style>
+        body{
+            text-align: center;
+        }
+        h1{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Kot ma Alę</h1>
+    <hr>
+    <button type="button" class="przed">Wprowadź przed</button>
+    <button type="button" class="po">Wprowadź po</button>
+    <hr>
+    <div id="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ipsa alias voluptas maxime pariatur exercitationem, possimus nostrum beatae cum quos voluptatem ex, minus magni autem. Quae recusandae iure assumenda ratione!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ipsa alias voluptas maxime pariatur exercitationem, possimus nostrum beatae cum quos voluptatem ex, minus magni autem. Quae recusandae iure assumenda ratione!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ipsa alias voluptas maxime pariatur exercitationem, possimus nostrum beatae cum quos voluptatem ex, minus magni autem. Quae recusandae iure assumenda ratione!</p>
+    </div>
+</body>
+</html>
